@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imgCartImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCartName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/imgCartImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/txtCartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/imgCartImage"
+            app:layout_constraintTop_toBottomOf="@id/txtCartName"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_delete"
+            android:contentDescription="Eliminar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnDecrease"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="Disminuir"
+            app:layout_constraintStart_toEndOf="@id/imgCartImage"
+            app:layout_constraintTop_toBottomOf="@id/txtCartPrice"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintStart_toEndOf="@id/btnDecrease"
+            app:layout_constraintTop_toTopOf="@id/btnDecrease"
+            app:layout_constraintBottom_toBottomOf="@id/btnDecrease"
+            android:layout_marginStart="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnIncrease"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_media_next"
+            android:contentDescription="Aumentar"
+            app:layout_constraintStart_toEndOf="@id/txtQuantity"
+            app:layout_constraintTop_toTopOf="@id/btnDecrease"
+            android:layout_marginStart="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
